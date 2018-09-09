@@ -39,7 +39,7 @@ app.use('/profile', profileRoutes);
 
 //=====================================================================
 //create home route
-app.get('/home', function(req, res){
+app.get('/', function(req, res){
     //get data from mongodb and pass it to view
     Notice.find({}, function (err, data) {
       if(err) throw err;
@@ -47,7 +47,7 @@ app.get('/home', function(req, res){
     })
   });
 
-  app.post('/home', urlencodedParser, function(req, res){
+  app.post('/', urlencodedParser, function(req, res){
     //get data from the view and it mongodb
     var newNotice = Notice(req.body).save(function (err, data) {
       if (err) throw err;
@@ -55,7 +55,7 @@ app.get('/home', function(req, res){
     });
   });
 
-  app.delete('/home/:item', function(req, res){
+  app.delete('/:item', function(req, res){
     //delete the requested item from mongodb
     Notice.find({item: req.params.item.replace(/\-/g," ")}).remove(function(err,data) {
       if(err) throw err;
