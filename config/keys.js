@@ -5,7 +5,7 @@ module.exports = {
     clientSecret:'sNjf86bWDnzFBfPvuC5sBfAG'
   },
   mongodb:{
-    dbURI:'mongodb://prakash:prakash11@ds139992.mlab.com:39992/oauth-test'
+    dbURI:'mongodb://prakash:prakash1108@ds151012.mlab.com:51012/slp'
   },
   session:{
     cookieKey:'prakashmishra'
