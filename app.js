@@ -79,6 +79,6 @@ app.post('/contact', urlencodedParser, function (req, res) {
   res.render('contact-success', {data: req.body});
 });
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
   console.log("listenning for the request");
 });
