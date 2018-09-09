@@ -1,0 +1,25 @@
+<nav><a href="/home"class="flow-text">Student Management Portal</a></nav>
+<ul class="sidenav sidenav-fixed">
+  <li class="center-align"><i class="large material-icons">account_circle</i></li>
+  <% if(user){ %>
+  <li><a href="/auth/logout"><i class="material-icons">logout</i>Logout</a></li>
+  <% }else { %>
+  <li><a href="/auth/login"><i class="material-icons">vpn_key</i>Login</a></li>
+  <% } %>
+  <li><a href="/home"><i class="material-icons">home</i>Home</a></li>
+  <li><a href="/profile"><i class="material-icons">face</i>Profile</a></li>
+ <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+</ul>
+<!-- =============================================================== -->
+<ul id="slide-out" class="sidenav">
+  <li class="center-align"><i class="large material-icons">account_circle</i></li>
+  <% if(user){ %>
+  <li><a href="/auth/logout"><i class="material-icons">logout</i>Logout</a></li>
+  <% }else { %>
+  <li><a href="/auth/login"><i class="material-icons">vpn_key</i>Login</a></li>
+  <% } %>
+  <li><a href="/home"><i class="material-icons">home</i>Home</a></li>
+  <li><a href=""><i class="material-icons">face</i>Profile</a></li>
+ <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+</ul>
+<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

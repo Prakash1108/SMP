@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>SMP</title>
+    <style media="screen" type="text/css">
+    nav{
+      font: 30px Tahoma;
+      text-align: center;
+      padding-top: 10px;
+      background-color: grey;
+    }
+    </style>
+  </head>
+
+  <body>
+    <nav><a href="/home"class="flow-text">Student Management Portal</a></nav>
+    <ul class="sidenav sidenav-fixed">
+      <li class="center-align"><i class="large material-icons">account_circle</i></li>
+      <li><a href="/home"><i class="material-icons">home</i>Home</a></li>
+      <li><a href="/profile"><i class="material-icons">face</i>Profile</a></li>
+     <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+    </ul>
+
+    <ul id="slide-out" class="sidenav">
+      <li class="center-align"><i class="large material-icons">account_circle</i></li>
+      <li><a href="/home"><i class="material-icons">home</i>Home</a></li>
+      <li><a href="/profile"><i class="material-icons">face</i>Profile</a></li>
+     <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+
+      <div class="container">
+	    <div class="row">
+      <div class="col s12 l9 offset-l3">
+       <form id="contact-form" method="POST" action="/contact">
+         <div class="input-field">
+  				<i class="material-icons prefix">email</i>
+  				  <input type="email" id="email" name="email"required>
+  				  <label for="email">Your Email</label>
+  				</div>
+  				<div class="input-field">
+  				  <i class="material-icons prefix">message</i>
+  				  <textarea id="message"class="materialize-textarea" name="message"required></textarea>
+  				  <label for="message">Your Message</label>
+  				</div>
+          <div class="input-field">
+  					<select name="branch">
+  					  <option value="" disabled selected>Choose your option</option>
+  					  <option value="Computer">Computer</option>
+  					  <option value="Electronics">Electronics</option>
+  					  <option value="Electrical">Electrical</option>
+  					  <option value="Mechanical">Mechanical</option>
+  					  <option value="Civil">Civil</option>
+  					</select>
+  					<label>Branch</label>
+          </div>
+          <div class="input-field">
+  					<select name="year">
+  					  <option value="" disabled selected>Choose your option</option>
+  					  <option value="First">First</option>
+  					  <option value="Second">Second</option>
+  					  <option value="Third">Third</option>
+  					  <option value="Fourth">Fourth</option>
+  					</select>
+  					<label>Year</label>
+          </div>
+          <div class="input-field center">
+  				  <button class="btn">Submit</button>
+  				</div>
+      </form>
+  		   </div>
+      </div>
+	  </div>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+   <script>
+       $(document).ready(function(){
+	      $('.sidenav').sidenav();
+		  $('select').formSelect();
+	   } );
+   </script>
+  </body>
+
+</html>
