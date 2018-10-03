@@ -1,25 +1,28 @@
-<nav><a href="/"class="flow-text">Student Profile System</a></nav>
+<nav><a href="/" class="flow-text">Student Profile System</a></nav>
 <ul class="sidenav sidenav-fixed">
-  <li class="center-align"><i class="large material-icons">account_circle</i></li>
   <% if(user){ %>
+  <li class="center-align"><img class="responsive-img circle " src="<%= user.thumbnail %>"></li>
   <li><a href="/auth/logout"><i class="material-icons">logout</i>Logout</a></li>
   <% }else { %>
+    <li class="center-align"><img class="responsive-img circle" src="https://images.unsplash.com/photo-1537958028595-f5e3db951aff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=613d052c567e4c42b89922843342e77a&auto=format&fit=crop&w=1950&q=80"></li>
+
   <li><a href="/auth/login"><i class="material-icons">vpn_key</i>Login</a></li>
   <% } %>
   <li><a href="/"><i class="material-icons">home</i>Home</a></li>
   <li><a href="/profile"><i class="material-icons">face</i>Profile</a></li>
- <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+  <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
 </ul>
-<!-- =============================================================== -->
+
 <ul id="slide-out" class="sidenav">
-  <li class="center-align"><i class="large material-icons">account_circle</i></li>
   <% if(user){ %>
+  <li class="center-align"><img class="responsive-img circle" src="<%= user.thumbnail %>"></li>
   <li><a href="/auth/logout"><i class="material-icons">logout</i>Logout</a></li>
   <% }else { %>
+    <li class="center-align"><img class="responsive-img circle" src="https://images.unsplash.com/photo-1537958028595-f5e3db951aff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=613d052c567e4c42b89922843342e77a&auto=format&fit=crop&w=1950&q=80"></li>
   <li><a href="/auth/login"><i class="material-icons">vpn_key</i>Login</a></li>
   <% } %>
   <li><a href="/"><i class="material-icons">home</i>Home</a></li>
   <li><a href="/profile"><i class="material-icons">face</i>Profile</a></li>
- <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+  <li><a href="/contact"><i class="material-icons">contacts</i>Contact Us</a></li>
 </ul>
 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
