@@ -1,132 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <title>SPS</title>
-    <style media="screen" type="text/css">
 
-      nav{
-        font: 30px Tahoma;
-        text-align: center;
-        padding-top: 10px;
-        background-color: grey;
-      }
-      img{
-        margin: 20px auto;
-      }
-      #circle{
-      	 width:170px;
-      	 height:170px;
-      	 text-align: center;
-      	 }
-      #box{
-      	 width:200px;
-      	 height:200px;
-      	 padding: 10px 0;
-         text-align: center;
-         margin:10px;
-      	 }
-      a{
-        text-decoration: none;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <title>SPS</title>
+  <style media="screen" type="text/css">
+    nav {
+      font: 30px Tahoma;
+      text-align: center;
+      padding-top: 10px;
+      background-color: grey;
+    }
 
-    </style>
-  </head>
+    img {
+      margin: 20px auto;
+    }
 
-  <body>
+    #circle {
+      width: 170px;
+      height: 170px;
+      text-align: center;
+    }
 
-    <% include sidebar.ejs %>
-    <div class="container">
+    #box {
+      width: 200px;
+      height: 200px;
+      padding: 10px 0;
+      text-align: center;
+      margin: 10px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <% include sidebar.ejs %>
+  <div class="container">
     <div class="row">
-    <div class="col s12 l9 offset-l3">
-    <header>
-            <p class="flow-text">Welcome to your profile, <%= user.username %></p>
-    </header>
-    <main>
-      <div class="row">
-        <div class="col s12 l4">
-            <div class="container grey  box"id="box">
-      		  <div class="white circle container"id="circle">
-      		  <i class="large material-icons">person_outline</i>
-            <div class="">
-              <a href="/profile/details"class="btn small grey">Details</a>
+      <div class="col s12 l9 offset-l3">
+        <header>
+          <p class="flow-text">Welcome to your profile,
+            <%= user.username %>
+          </p>
+        </header>
+        <main>
+          <div class="row">
+            <div class="col s12 l4">
+              <div class="container grey  box" id="box">
+                <div class="white circle container" id="circle">
+                  <i class="large material-icons">person_outline</i>
+                  <div class="">
+                    <a href="/profile/details" class="btn small grey">Details</a>
+                  </div>
+                </div>
+              </div>
             </div>
-      		  </div>
-      	  </div>
-        </div>
-        <div class="col s12 l4">
-            <div class="container grey box"id="box">
-      		  <div class="white circle container"id="circle">
-      		  <i class="large material-icons">person_outline</i>
-            <div class="">
-              <a href="/profile/examination"class="btn small grey">Examinations</a>
+            <div class="col s12 l4">
+              <div class="container grey box" id="box">
+                <div class="white circle container" id="circle">
+                  <i class="large material-icons">person_outline</i>
+                  <div class="">
+                    <a href="/profile/examination" class="btn small grey">Examinations</a>
+                  </div>
+                </div>
+              </div>
             </div>
-      		  </div>
-      	  </div>
-        </div>
-        <div class="col s12 l4">
-            <div class="container grey  box"id="box">
-      		  <div class="white circle container"id="circle">
-      		  <i class="large material-icons">person_outline</i>
-            <div class="">
-              <a href="/profile/attendance"class="btn small grey">Attendance</a>
+            <div class="col s12 l4">
+              <div class="container grey  box" id="box">
+                <div class="white circle container" id="circle">
+                  <i class="large material-icons">person_outline</i>
+                  <div class="">
+                    <a href="/profile/attendance" class="btn small grey">Attendance</a>
+                  </div>
+                </div>
+              </div>
             </div>
-      		  </div>
-      	  </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 l4">
-            <div class="container grey box"id="box">
-      		  <div class="white circle container"id="circle">
-      		  <i class="large material-icons">person_outline</i>
-            <div class="">
-              <a href="/profile/result"class="btn small grey">Result</a>
+          </div>
+          <div class="row">
+            <div class="col s12 l4">
+              <div class="container grey box" id="box">
+                <div class="white circle container" id="circle">
+                  <i class="large material-icons">person_outline</i>
+                  <div class="">
+                    <a href="/profile/result" class="btn small grey">Result</a>
+                  </div>
+                </div>
+              </div>
             </div>
-      		  </div>
-      	  </div>
-        </div>
-        <div class="col s12 l4">
-            <div class="container grey box"id="box">
-      		  <div class="white circle container"id="circle">
-      		  <i class="large material-icons">person_outline</i>
-            <div class="">
-              <a href="/profile/Notification"class="btn small grey">Notification</a>
+            <div class="col s12 l4">
+              <div class="container grey box" id="box">
+                <div class="white circle container" id="circle">
+                  <i class="large material-icons">person_outline</i>
+                  <div class="">
+                    <a href="/profile/Notification" class="btn small grey">Notification</a>
+                  </div>
+                </div>
+              </div>
             </div>
-      		  </div>
-      	  </div>
-        </div>
-        <div class="col s12 l4">
-            <div class="container grey box"id="box">
-      		  <div class="white circle container"id="circle">
-      		  <i class="large material-icons">person_outline</i>
-            <div class="">
-              <a href="/profile/schedule"class="btn small grey">Schedule</a>
+            <div class="col s12 l4">
+              <div class="container grey box" id="box">
+                <div class="white circle container" id="circle">
+                  <i class="large material-icons">person_outline</i>
+                  <div class="">
+                    <a href="/profile/schedule" class="btn small grey">Schedule</a>
+                  </div>
+                </div>
+              </div>
             </div>
-      		  </div>
-      	  </div>
-        </div>
-      </div>
+          </div>
 
-    </main>
+        </main>
+      </div>
     </div>
-    </div>
-    </div>
-   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-   <!-- Compiled and minified JavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-   <script>
-       $(document).ready(function(){
-	      $('.sidenav').sidenav();
-	   } );
-   </script>
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+    });
+  </script>
+</body>
 
 </html>
